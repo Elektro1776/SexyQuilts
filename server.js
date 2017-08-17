@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var path = require('path');
 var homeRouter = require('./src/controllers/home.js');
+var aboutRouter = require('./src/controllers/about');
 var app = express();
 var port = process.env.PORT || 3000
 
@@ -13,10 +14,9 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')))
-
-app.use(homeRouter)
-
-
+app.use(bodyParser.json())
+app.use(homeRouter);
+app.use(aboutRouter);
 
 
 
