@@ -22,11 +22,6 @@ app.use(aboutRouter);
 app.use(ordersRouter);
 app.use(contactRouter);
 
-
-
-
-
-
 app.listen(port, ()=>{
   console.log('served started on port', port);
 });
