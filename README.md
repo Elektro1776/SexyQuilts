@@ -1,2 +1,0 @@
-# SexyQuilts
-my new brainchild!
